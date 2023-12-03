@@ -6,13 +6,13 @@
     const audio = document.getElementById("audio-file");
     let numberOfActiveTimers = 0;
 
-    // onclick event listener for setButton
+    
     function addNewTimer() {
         const hours = Number(document.getElementById("hour").value);
         const minutes = Number(document.getElementById("minute").value);
         const seconds = Number(document.getElementById("seconds").value);
     
-        // total time calculation in seconds
+        
         const totalTime = hours * 3600 + minutes * 60 + seconds;
     
         if (totalTime > 0) {
@@ -33,14 +33,14 @@
         runtimer(totalTime, newTimerCard);
         }
     }
-    // funtion to run the timer which is added
+    
     function runtimer(totalTime, newTimerCard) {
         let timerContainer = newTimerCard.querySelector("#timer-container");
         let hour = timerContainer.querySelector("#hour");
         let minute = timerContainer.querySelector("#minute");
         let seconds = timerContainer.querySelector("#seconds");
     
-        // now set time interval for each second to update the values in DOM
+        
         const myTimerUpdate = setInterval(() => {
         if (totalTime == 0) {
             newTimerCard.classList.toggle("time-up");
